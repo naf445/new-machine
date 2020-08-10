@@ -1,0 +1,79 @@
+---
+tags [git, github]
+---
+
+Helpful git alias
+'alias graph="git log --all --decorate --oneline --graph"'
+
+Set git config info
+'git config --global user.name "Mona Lisa"'
+'git config --global user.email "Mona Lisa"'
+
+Initialize a git directory before sending it to GitHub
+> Go to directory you want
+'git init'
+> Add/stage everything you want to push
+> git commit with a message on your local
+> add a remote, probably called origin, see below for more
+'git push -u origin master'
+
+See branches available on local, -r for remote
+'git branch'
+'git branch -r'
+
+Create branch
+'git checkout -b <branch_name>'
+
+Clone all and checkout specific branch
+'git clone --branch <branchname> url'
+
+Specify where to push branches 
+Add a “remote” branch and refer to it from now on as "origin", just to make things simpler, it’s an alias.
+We can have multiple “remote”’s set up using this command and then push our commits to any of them by referencing their various names.
+'git remote add origin <https://github.com/repo/name>'
+'git remote add second-origin <https://github.com/repo/other-name>'
+'git remote set-url origin <https://github.com/USERNAME/REPOSITORY.git>'
+'git remote -v'
+
+Push to one of these specific remote branches
+'git push -u origin <branch_name>'
+'git push -u <remote location alias, likely origin, can have multiple of these set up, see above> <branch_name>'
+
+Delete branch remote and locally
+'git push --delete origin <branch_name>'
+'git branch -d <branch_name>'
+
+Force switch branches
+'git checkout -f other_branch_name'
+
+Checkout branch from remote
+'git checkout --track origin/<remote_branch_name>'
+
+Pull changes from a remote branch but investigate first?
+'git fetch' # Gets remote branches to local
+'git branch -r' # Shows you all branches local and remote
+'git checkout <branch that was remote but is now local from the fetch>' # To switch to that newly fetched branch
+'git diff <branch you want to compare differences between>'
+'git checkout <eventual target branch (branch you want to pull changes in to)>'
+
+Stage or Commit from within a file
+http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/ 
+
+Resolve conflicts w/ vim-fugitive
+http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/
+'vim <conflicted file>'
+':Gdiffsplit!'
+
+The top file (//2) is the target branch file, the bottom file (//3) is the merge file you pulled changes from.
+It is your job, since there are conflicting line from both files, to decide which version will be the final version.
+The lines from the target branch, which you had on your local, or the lines from the merge file you pulled from remote.
+
+Choose a section from either the target file or the merge file to use as the final version and send it to the working copy
+':diffput [buffer spec]'
+
+Choose either the target file or the merge file as the thing to pull changes from into the working file
+':diffget [buffer spec]'
+Fix coloring
+':diffupdate'
+
+

@@ -1,0 +1,27 @@
+# Website for help
+https://github.com/cheat/cheat
+
+# To install
+pip install cheat
+
+# To add cheat sheets, add file with no extension into
+~/.cheat
+
+# Config location
+~/.config/cheat/conf.yml
+
+# Usage
+# To see example usage of a program:
+cheat <command>
+
+# To edit a cheatsheet
+cheat -e <command>
+
+# To list available cheatsheets
+cheat -l
+
+# To search available cheatsheets
+cheat -s <command>
+
+# To get the current `cheat' version
+cheat -v

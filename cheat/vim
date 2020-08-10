@@ -1,0 +1,18 @@
+---
+tags [vi, vim]
+---
+
+Suspend vim session
+'<control-z>'
+
+Resume suspended vim session
+'fg <carriage return>'
+
+Start recording mode and assign it to a <letter>
+'q<letter>'
+
+End recording mode
+'q'
+
+Playback recorded and assigned macro
+'@<letter>'

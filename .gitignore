@@ -1,0 +1,5 @@
+.netrwhist
+plug.vim
+vimplugs/
+*.swp
+autoload/

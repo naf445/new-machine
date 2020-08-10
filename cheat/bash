@@ -1,0 +1,55 @@
+---
+tags [bash, terminal]
+---
+
+# Topic
+SSH/ssh: Secure Shell
+
+# Examples
+Connect via ssh
+'ssh naf445@rstudio.analytics.northwestern.edu'
+OR 
+'ssh -i ~/.ssh/id_rsa nfranklin@wolf.iems.private'
+
+# Topic
+Port forwarding, speifically of a jupyter server from a remote machine to local
+
+At a high level, we will spin up a jupyter server on a certain port on a remote machine,
+then we will forward that port to our local machine.
+
+# Examples
+- SSH in to remote machine, probably EC2 instance
+- Open up a persistent terminal session (using screen or tmux)
+- Might need to activate virtual or conda env with jupyter installed
+- Open a jupyter server and forward it to a specific port!
+- You may need to get the token presented by the command
+'jupyter notebook --port=<PORTNUM>'
+
+- Switch to local machine terminal, open a port forward:
+'ssh -L PORTNUM:localhost:PORTNUM user@serveripaddress' 
+
+- In local browser go to below, may have to paste token
+'http://localhost:PORTNUM'
+
+- To see jupyter notebook servers running:
+'jupyter notebook list'
+
+# Topic
+SCP/scp: secure transfer protocol
+Uses SSH to either send a file from local host to remote host
+Or uses SSH to retrieve file from remote and store on local
+Help site: http://www.hypexr.org/linux_scp_help.php
+
+# Examples
+Send a file using SCP
+'scp netid@rstudio.analytics.northwestern.edu:team/myfile local/path'
+
+# Topic
+Shell commands
+
+# Examples
+To see contents of current directory:
+'ls'
+
+Open a markdown file
+'open README.md -a "Google Chrome"'
