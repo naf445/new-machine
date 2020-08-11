@@ -231,3 +231,4 @@ nnoremap <c-l> <c-w>l
 
 nnoremap <leader><bar> :vsplit<cr> 
 nnoremap <leader>\ :split<cr>
+
