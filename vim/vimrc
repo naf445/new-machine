@@ -220,10 +220,18 @@ onoremap ip i(
 "More Operator-Pending Mappings
 
 " Changing to allow easy split navigation
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
+"nnoremap <c-h> <c-w>h
+"nnoremap <c-j> <c-w>j
+"nnoremap <c-k> <c-w>k
+"nnoremap <c-l> <c-w>l
+nnoremap <c-j> :TmuxNavigateDown<cr>
+nnoremap <c-k> :TmuxNavigateUp<cr>
+nnoremap <c-l> :TmuxNavigateRight<cr>
+nnoremap <c-h> :TmuxNavigateLeft<cr>
+inoremap <c-h> :TmuxNavigateLeft<cr>
+inoremap <c-j> :TmuxNavigateDown<cr>
+inoremap <c-k> :TmuxNavigateUp<cr>
+inoremap <c-l> :TmuxNavigateRight<cr>
 
 " Make window splitting consistent with tmux pane splitting that I set in
 " ~/.tmux.conf
@@ -232,3 +240,5 @@ nnoremap <c-l> <c-w>l
 nnoremap <leader><bar> :vsplit<cr> 
 nnoremap <leader>\ :split<cr>
 
+" Make result of digging down in to a tag using ctags open in new split
+nnoremap <c-]> :vsplit<cr><c-]><c-w>l
