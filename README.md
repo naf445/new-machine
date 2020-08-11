@@ -6,7 +6,7 @@ on a clean new machine fast and easy.
 - `git clone git@github.com:naf445/new-machine.git`
 - `mv new-machine/ .new-machine/`
 - In home directory: `echo 'runtime vimrc' > .vimrc`
-- `ln -s new-machine/vim/ .vim/`
+- `ln -s .new-machine/vim/ .vim`
 - `cd .vim` --> `vim vimrc` and plugins will prob download but there will prob be some errors
 
 ### Jupyter-vim plugin specific, but prob important anyways to avoid errors
