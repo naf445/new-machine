@@ -8,6 +8,7 @@ on a clean new machine fast and easy.
 - In home directory: `echo 'runtime vimrc' > .vimrc`
 - `ln -s .new-machine/vim/ .vim`
 - `cd .vim` --> `vim vimrc` and plugins will prob download but there will prob be some errors
+- if colors look weird on linux machine, you may have to create an alias for tmux which makes tmux run tmux -2
 
 ### Jupyter-vim plugin specific, but prob important anyways to avoid errors
 - Check system python type with `:pythonx import sys; print(sys.version)`
