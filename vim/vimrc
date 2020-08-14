@@ -242,4 +242,4 @@ nnoremap <leader><bar> :vsplit<cr>
 nnoremap <leader>\ :split<cr>
 
 " Make result of digging down in to a tag using ctags open in new split
-nnoremap <c-]> :vsplit<cr><c-]><c-w>l
+nnoremap <c-]> :vsplit<cr><c-w>l<c-]>
