@@ -53,3 +53,16 @@ To see contents of current directory:
 
 Open a markdown file
 'open README.md -a "Google Chrome"'
+
+# Topic
+SFTP, SSH File Transfer Protocol
+
+# Examples
+Open an SFTP connection
+'sftp remote_username@server_ip_or_hostname'
+
+To upload a file from the local machine to the remote SFTP server, use the put command:
+'put path/to/local/filename.zip'
+
+
+

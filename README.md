@@ -11,6 +11,10 @@ on a clean new machine fast and easy.
 - if colors look weird on linux machine, you may have to create an alias for command `tmux` which makes it run `tmux -2`
 - symlink tmux config 
 - `ln -s .new-machine/tmux/.tmux.conf .tmux.conf`
+- If mac, install homebrew
+- `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null`
+- install TMUX
+- `brew install tmux`
 
 ### Jupyter-vim plugin specific, but prob important anyways to avoid errors
 - Check system python type with `:pythonx import sys; print(sys.version)`

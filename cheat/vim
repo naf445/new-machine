@@ -16,3 +16,22 @@ End recording mode
 
 Playback recorded and assigned macro
 '@<letter>'
+
+# Topic
+Registers
+
+# Info 
+- https://www.brianstorti.com/vim-registers/
+- They are like memory stores. Like my computer clipboard, but many of them! 
+- Access a register by using a double quote, "
+- We access them by saying "<register name> and then picking an action!
+- "ry accesses the r-register, and yanks text to that register
+- "rp accesses the r-register, and then pastes that register's content
+- In insert mode, <c-r><register name> will paste that register's contents!
+- In fact, when you delete text or copy it, you actually are just placing it in the "", the "-register!!!!!!
+- p is just a shorthand for ""p!!! Mind blown!
+- Every delete or yank command will add that text to the register stack which vim auto create for registers 0-9. register 0, "0 will have the most recently yanked/deleted text!.
+- :let is used to write to a register.
+- But when we reference a register's name with a command, we use @ instead of double quote 
+- :let @+=@% means let the "+ register, the clipboard, be filled with the value from "%, the current path! "% is just a special register that always holds the current file path! 
+- What you probably didn’t know is that vim uses a register to store a macro's actions, so if you use qw to record a macro, the register "w will have all the things that you did, it’s all just plain text.

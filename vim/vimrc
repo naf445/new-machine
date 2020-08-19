@@ -135,6 +135,9 @@ inoremap <leader>[ []<esc>i
 inoremap <leader>' ''<esc>i
 inoremap <leader>" ""<esc>i
 inoremap <leader>""" """<cr>"""<esc>ka
+inoremap <leader>` ``<esc>i
+inoremap <leader>* **<esc>i
+inoremap <leader>** ****<esc>hi
 
 " maps 'up' to switch to visual mode, then highlight the rest of the inner
 " word, then switch to the other end of the word, then upper case
@@ -153,8 +156,9 @@ nnoremap <leader>svrc :source ~/.vim/vimrc<cr>
 " auto expanding text you want.
 " Abbreviation to put my email
 iabbrev @@ NathanAriFranklin@gmail.com
-" Abbreviation to put todays date
+" Abbreviation to put todays date or datetime
 iabbrev DD <C-R>=strftime("%d %b %Y")<CR> 
+iabbrev DT <C-R>=strftime("%d %b %Y, %H:%M:00")<CR> 
 
 " Mapping to allow me to wrap quotation marks or one of many other symbols
 " around a word. It works by visually selecting the word, exiting visual mode
@@ -166,6 +170,9 @@ nnoremap <leader><leader>{ viw<esc>a}<esc>bi{<esc>lel
 nnoremap <leader><leader>[ viw<esc>a]<esc>bi[<esc>lel
 nnoremap <leader><leader>' viw<esc>a'<esc>bi'<esc>lel
 nnoremap <leader><leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader><leader>` viw<esc>a`<esc>bi`<esc>lel
+nnoremap <leader><leader>* viw<esc>a*<esc>bi*<esc>lel
+nnoremap <leader><leader>** viw<esc>a**<esc>bi**<esc>lel
 
 " Mapping to allow me to wrap quotation marks or one of many other symbols
 " around selected text in visual mode. 
@@ -175,13 +182,16 @@ vnoremap <leader><leader>{ <esc>`>a}<esc>`<i{<esc>`<lv`>l
 vnoremap <leader><leader>[ <esc>`>a]<esc>`<i[<esc>`<lv`>l
 vnoremap <leader><leader>' <esc>`>a'<esc>`<i'<esc>`<lv`>l
 vnoremap <leader><leader>" <esc>`>a"<esc>`<i"<esc>`<lv`>l
+vnoremap <leader><leader>` <esc>`>a`<esc>`<i`<esc>`<lv`>l
+vnoremap <leader><leader>* <esc>`>a*<esc>`<i*<esc>`<lv`>l
+vnoremap <leader><leader>** <esc>`>a**<esc>`<i**<esc>`<lv`>l 
 
 " Maps H in normal/visual mode to go to the beginning of the current line. Since h moves left you can think of H as a "stronger" h
 nnoremap H 0
 vnoremap H 0
 " Maps L in normal/visual mode to go to the end of the current line. Since l moves right you can think of L as a "stronger" l
 nnoremap L $
-vnoremap L $
+vnoremap L $h
 
 " Save some wear and tear on our left hand by making escaping a bit more
 " fluid! Also disable the old way to force me!
@@ -243,3 +253,17 @@ nnoremap <leader>\ :split<cr>
 
 " Make result of digging down in to a tag using ctags open in new split
 nnoremap <c-]> :vsplit<cr><c-w>l<c-]>
+
+" Using templates to make it easier to preopulate notes files
+nnoremap <leader>t1 :-1read $HOME/.new-machine/vim/templates/meeting.md<CR>
+
+
+
+
+
+
+
+
+
+
+
