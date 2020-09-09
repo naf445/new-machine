@@ -101,6 +101,7 @@ pythonx import os; import vim
 pythonx activate_this = os.path.join(vim.eval('g:vim_virtualenv_path'), 'bin/activate_this.py')
 pythonx with open(activate_this) as f: exec(f.read(), {'__file__': activate_this})
 
+
 " Following the learn the vimscript the hard way tutorial, so adding some
 " things below here which are exercises in the book.
 echom "Hey Nate, good coding today! - vimCat (>^.^<)"
@@ -252,13 +253,10 @@ nnoremap <c-]> :vsplit<cr><c-w>l<c-]>
 " Using templates to make it easier to preopulate notes files
 nnoremap <leader>t1 :-1read $HOME/.new-machine/vim/templates/meeting.md<CR>
 
-
-
-
-
-
-
-
-
+" Change some default key bindings for jupyter-vim
+" xc stands for eXecute cell
+nnoremap <leader>xc :JupyterSendCell<CR>
+" xC stands for eXecute Cells
+nnoremap <leader>xC :JupyterRunFile<CR>
 
 
