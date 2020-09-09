@@ -21,6 +21,6 @@ on a clean new machine fast and easy.
 - Make sure you have virtualenv installed, if not pip install it
 - Create a virtual environment referencing the system python which vim was compiled on
 - Something like `virtualenv -p /usr/local/bin/python3.7 /path/to/my/new/vim_virtualenv`
-- Go back into vimrc and change the `let g:vim_virtualenv_path = '/home/sodflo/virtualenvs/vim_virtualenv'` line to reflect where your new virtualenv is
+- In your .bashrc, add a line to export a variable called VIM_VIRTUALENV_PATH with that path, full name not with the ~ character
 - `source virtualenvs/vim_virtualenv/bin/activate`
 - `pip install jupyter` 
