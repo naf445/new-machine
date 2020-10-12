@@ -15,6 +15,10 @@ on a clean new machine fast and easy.
 - `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null`
 - install TMUX
 - `brew install tmux`
+- set vim as default editor:
+    * export VISUAL=vim
+    * export EDITOR="$VISUAL"
+
 
 ### Jupyter-vim plugin specific, but prob important anyways to avoid errors
 - Check system python type with `:pythonx import sys; print(sys.version)`

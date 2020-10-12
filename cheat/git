@@ -76,4 +76,18 @@ Choose either the target file or the merge file as the thing to pull changes fro
 Fix coloring
 ':diffupdate'
 
+If your branch and another branch are pointing to the same most recent commit,
+when you switch over to that other branch, your changed files will come with you.
+You will either have to commit them to your current branch so git knows which
+branch to associate them with, or you can stash like below!
+
+# Stash the changes on current branch
+git stash
+# Go to other branch
+git checkout master
+# On return to dev branch, restore changes via following
+git stash pop
+
+Something to understand: A Git branch is just a pointer to a commit
+
 
