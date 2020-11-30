@@ -225,6 +225,14 @@ onoremap ip i(
 " This concept of operators and movements is KEY to efficient Vimming. 
 "More Operator-Pending Mappings
 
+" Make toggling paste/nopaste a little easier!
+" When you have some more brain power do this. either make it easier to
+" toggle paste/nopaste or maybe just make a shortcut
+" to auto set paste, paste, and then set nopaste!
+nnoremap <leader>sp :set paste<cr>
+nnoremap <leader>snp :set nopaste<cr>
+inoremap <leader>snp <esc>:set nopaste<cr>li
+
 " Changing to allow easy split navigation
 "nnoremap <c-h> <c-w>h
 "nnoremap <c-j> <c-w>j
