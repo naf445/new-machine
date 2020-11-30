@@ -10,16 +10,26 @@ on a clean new machine fast and easy.
 - `cd .vim` --> `vim vimrc` and plugins will prob download but there will prob be some errors
 - if colors look weird on linux machine, you may have to create an alias for command `tmux` which makes it run `tmux -2`
 - symlink tmux config 
-- `ln -s .new-machine/tmux/.tmux.conf .tmux.conf`
+    * `ln -s .new-machine/tmux/.tmux.conf .tmux.conf`
 - If mac, install homebrew
-- `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null`
+    * `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null`
 - install TMUX
-- `brew install tmux`
+    * `brew install tmux`
 - set vim as default editor:
     * export VISUAL=vim
     * export EDITOR="$VISUAL"
+- Install pip
+    * `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
+    * `python3 get-pip.py`
+- Potentially need to add python3.7/bin location to terminal emulator app path variable 
+- Install cheat
+    * `pip install cheat`
+- remove initial cheat folder and symlink your cheat folder
+    * `rm -R .cheat`
+    * `ln -s .new-machine/cheat/ .cheat`
 
 
+ 
 ### Jupyter-vim plugin specific, but prob important anyways to avoid errors
 - Check system python type with `:pythonx import sys; print(sys.version)`
 - Make sure you have virtualenv installed, if not pip install it
